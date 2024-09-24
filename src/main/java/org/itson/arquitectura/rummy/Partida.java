@@ -6,6 +6,10 @@ package org.itson.arquitectura.rummy;
 
 import componentes.FichaComponente;
 import java.awt.Dimension;
+import java.awt.Graphics;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.border.Border;
 
 /**
  *
@@ -19,6 +23,7 @@ public class Partida extends javax.swing.JDialog {
     public Partida(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+       
     }
 
     /**
@@ -35,8 +40,6 @@ public class Partida extends javax.swing.JDialog {
         botonIcono2 = new componentes.BotonIcono();
         panelMasFicha = new javax.swing.JPanel();
         btnMasFicha = new componentes.BotonIcono();
-        panelTablaMano = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         panelFila1Tabla = new javax.swing.JPanel();
         panelFila2Tabla = new javax.swing.JPanel();
         panelTablero = new javax.swing.JPanel();
@@ -68,7 +71,7 @@ public class Partida extends javax.swing.JDialog {
         );
         panelAceptarLayout.setVerticalGroup(
             panelAceptarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(botonIcono2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 104, Short.MAX_VALUE)
+            .addComponent(botonIcono2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
         );
 
         jPanel1.add(panelAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 510, -1, 104));
@@ -95,18 +98,11 @@ public class Partida extends javax.swing.JDialog {
 
         jPanel1.add(panelMasFicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 380, 75, -1));
 
-        panelTablaMano.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tablaMano.png"))); // NOI18N
-        panelTablaMano.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
         panelFila1Tabla.setPreferredSize(new java.awt.Dimension(546, 70));
-        panelTablaMano.add(panelFila1Tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 546, 70));
+        jPanel1.add(panelFila1Tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, 546, 70));
 
         panelFila2Tabla.setPreferredSize(new java.awt.Dimension(546, 70));
-        panelTablaMano.add(panelFila2Tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 546, 70));
-
-        jPanel1.add(panelTablaMano, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 500, -1, -1));
+        jPanel1.add(panelFila2Tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 570, 546, 70));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tablero.png"))); // NOI18N
 
@@ -123,7 +119,7 @@ public class Partida extends javax.swing.JDialog {
 
         jPanel1.add(panelTablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondoPartida.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondoPartida2.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -143,6 +139,7 @@ public class Partida extends javax.swing.JDialog {
 
     private void btnMasFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasFichaActionPerformed
         crearComponenteFicha();
+        System.out.println("Se generó un componente");
     }//GEN-LAST:event_btnMasFichaActionPerformed
 
     private void botonIcono2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIcono2ActionPerformed
@@ -154,6 +151,7 @@ public class Partida extends javax.swing.JDialog {
         panelFila1Tabla.add(ficha); 
         panelFila1Tabla.revalidate(); 
         panelFila1Tabla.repaint();
+        
     }
     /**
      * @param args the command line arguments
@@ -201,14 +199,12 @@ public class Partida extends javax.swing.JDialog {
     private componentes.BotonIcono botonIcono2;
     private componentes.BotonIcono btnMasFicha;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel panelAceptar;
     private javax.swing.JPanel panelFila1Tabla;
     private javax.swing.JPanel panelFila2Tabla;
     private javax.swing.JPanel panelMasFicha;
-    private javax.swing.JPanel panelTablaMano;
     private javax.swing.JPanel panelTablero;
     // End of variables declaration//GEN-END:variables
 }

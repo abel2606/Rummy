@@ -37,7 +37,7 @@ public class PanelArrastrable extends JPanel{
                 int x = e.getXOnScreen() - mouseX;
                 int y = e.getYOnScreen() - mouseY;
 
-                draggablePanel.setLocation(x, y);
+                 draggablePanel.setLocation(x, y);
             }
         });
 
